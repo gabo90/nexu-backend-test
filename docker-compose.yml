@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  nexu-backend-test:
+    container_name: nexu-backend-test
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres_nexu
+    command: ["rails", "server", "-b", "0.0.0.0"]
+
+  postgres_nexu:
+    container_name: postgres_nexu
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=devtest
+      - POSTGRES_DB=postgres
+    env_file:
+      - .env
+    volumes:
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./postgres-data/:/var/lib/postgresql/data
