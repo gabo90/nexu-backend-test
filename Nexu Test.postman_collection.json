@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "162afe89-af83-42ea-870a-9bf5358d3edb",
+		"name": "Nexu Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6637871"
+	},
+	"item": [
+		{
+			"name": "brands",
+			"item": [
+				{
+					"name": "models",
+					"item": [
+						{
+							"name": "brand models",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/brands/1/models",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"brands",
+										"1",
+										"models"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create brand model",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"model_1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/brands/2/models",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"brands",
+										"2",
+										"models"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/brands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Audi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/brands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brands"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "models",
+			"item": [
+				{
+					"name": "model list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/models",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"models"
+							],
+							"query": [
+								{
+									"key": "lower",
+									"value": "100000",
+									"disabled": true
+								},
+								{
+									"key": "greater",
+									"value": "90000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update model",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"average_price\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/models/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"models",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
