@@ -57,7 +57,7 @@ docker exec -it nexu-backend-test bundle exec rspec
 ## Comentarios
 Se fijó el objetivo de dejar una aplicación funcional, con validaciones (básicas) y pruebas unitarias (escenarios más críticos).
 
-En lo personal stoy muy satisfecho con la realización de esta prueba, independientemente de la finalidad y resultado, me pareció una actividad bastante interesante y retadora.
+En lo personal estoy muy satisfecho con la realización de esta prueba, independientemente de la finalidad y resultado, me pareció una actividad bastante interesante y retadora.
 
 
 Todo comentario y crítica constructiva es bienvenida.
