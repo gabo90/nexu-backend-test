@@ -16,7 +16,7 @@ class Brands::Models::Index
   end
 
   def handle_error(params)
-    eturn if context.failure?
+    return if context.failure?
 
     context.fail!(**params)
   end
